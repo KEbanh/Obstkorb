@@ -1,0 +1,39 @@
+<html><head>
+		<title>Aufgabe</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<script>
+		var vArrayObstkorb = [];
+		var vOutput = "";
+			function script() {
+				var vAddition = document.getElementById("ID_Input").value; 
+				
+				document.getElementById("ID_Output").innerHTML = "";
+				vOutput = "<ul>";
+				
+				vArrayObstkorb.push(vAddition);
+				vArrayObstkorb.sort()
+
+				
+				for(var i = 0; i < vArrayObstkorb.length; i++){
+					
+					var vAnzahl=vArrayObstkorb.length;
+					vOutput += "<li>" + vArrayObstkorb[i] + "</li>";
+								
+					
+				}
+				vOutput += "</p>";
+				vOutput += "Sie haben " +vAnzahl+ " im Warenkorb";
+				vOutput += "</ul>";
+				
+				document.getElementById("ID_Output").innerHTML = vOutput;
+			}
+		</script>
+	</head>
+
+	<body style="background-color:#F8FBEF">
+		<h1>Fülle den Obstkorb</h1>
+		<input id="ID_Input" type="text">
+		<button onclick="script();">in den Obstkorb</button>
+		<div id="ID_Output"></div>
+	
+</body></html>
